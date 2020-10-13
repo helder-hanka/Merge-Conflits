@@ -1,0 +1,74 @@
+nvm is not compatible with the npm config "prefix" option: currently set to "/usr/local"
+Run `npm config delete prefix` or `nvm use --delete-prefix v13.11.0 --silent` to unset it.
+➜  Merge-Conflits git:(main) ✗ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/helder-hanka/Merge-Conflits
+   8f8cd98..1b6d56c  main       -> origin/main
+Updating 8f8cd98..1b6d56c
+error: Your local changes to the following files would be overwritten by merge:
+        README.md
+Please commit your changes or stash them before you merge.
+Aborting
+➜  Merge-Conflits git:(main) ✗ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  Merge-Conflits git:(main) ✗ git add README.md 
+➜  Merge-Conflits git:(main) ✗ git commit -m "add LOCAL"      
+[main a2b87f2] add LOCAL
+ 1 file changed, 1 insertion(+)
+➜  Merge-Conflits git:(main) git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+➜  Merge-Conflits git:(main) git pull
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+➜  Merge-Conflits git:(main) ✗ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  Merge-Conflits git:(main) ✗ git add README.md 
+➜  Merge-Conflits git:(main) git commit -m "accepte change current of my local"
+[main 9b2e8bf] accepte change current of my local
+➜  Merge-Conflits git:(main) git pull
+Already up to date.
+➜  Merge-Conflits git:(main) git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 442 bytes | 442.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/helder-hanka/Merge-Conflits.git
+   1b6d56c..9b2e8bf  main -> main
+➜  Merge-Conflits git:(main) 
